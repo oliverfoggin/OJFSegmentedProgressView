@@ -1,0 +1,248 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEE4A3F8B21F0F3027756A3C /* OJFSegmentedProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE4A5887534A21EB1ECC0B4 /* OJFSegmentedProgressView.m */; };
+		EEE4A68C2B6D6356E39058D7 /* OJFSegmentedProgressView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EEE4AA6755BB32D27079AE35 /* OJFSegmentedProgressView.h */; };
+		EEE4AF06D40301DDCDB04ABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE4AC0904E7338D33A5881F /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EEE4A66F3FD7BDCEDCE92479 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				EEE4A68C2B6D6356E39058D7 /* OJFSegmentedProgressView.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EEE4A36790EE782E34A508A9 /* libOJFSegmentedProgressView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOJFSegmentedProgressView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE4A53E97C254209E835857 /* OJFSegmentedProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OJFSegmentedProgressView-Prefix.pch"; sourceTree = "<group>"; };
+		EEE4A5887534A21EB1ECC0B4 /* OJFSegmentedProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OJFSegmentedProgressView.m; sourceTree = "<group>"; };
+		EEE4AA6755BB32D27079AE35 /* OJFSegmentedProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OJFSegmentedProgressView.h; sourceTree = "<group>"; };
+		EEE4AC0904E7338D33A5881F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEE4ABBBE0C2D8007B6C64B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE4AF06D40301DDCDB04ABA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEE4A5C6076664E202DD9F2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4A36790EE782E34A508A9 /* libOJFSegmentedProgressView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE4A71FF2D8D356477EC615 /* OJFSegmentedProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4A90B1FDE2B0C4D9A6861 /* Supporting Files */,
+				EEE4AA6755BB32D27079AE35 /* OJFSegmentedProgressView.h */,
+				EEE4A5887534A21EB1ECC0B4 /* OJFSegmentedProgressView.m */,
+			);
+			path = OJFSegmentedProgressView;
+			sourceTree = "<group>";
+		};
+		EEE4A90B1FDE2B0C4D9A6861 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4A53E97C254209E835857 /* OJFSegmentedProgressView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEE4AB8C21C2275F7A8FD08D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4AC0904E7338D33A5881F /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEE4AFEC50157DBDE23C57D4 = {
+			isa = PBXGroup;
+			children = (
+				EEE4A5C6076664E202DD9F2D /* Products */,
+				EEE4AB8C21C2275F7A8FD08D /* Frameworks */,
+				EEE4A71FF2D8D356477EC615 /* OJFSegmentedProgressView */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEE4AB9F71BF535DE02E25EA /* OJFSegmentedProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE4A825F6F79BE056756774 /* Build configuration list for PBXNativeTarget "OJFSegmentedProgressView" */;
+			buildPhases = (
+				EEE4A13E53CD381B8950C664 /* Sources */,
+				EEE4ABBBE0C2D8007B6C64B9 /* Frameworks */,
+				EEE4A66F3FD7BDCEDCE92479 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OJFSegmentedProgressView;
+			productName = OJFSegmentedProgressView;
+			productReference = EEE4A36790EE782E34A508A9 /* libOJFSegmentedProgressView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEE4AC72DFC46D2094BACD8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Oliver Foggin";
+			};
+			buildConfigurationList = EEE4A193933E3F4FC4EF2205 /* Build configuration list for PBXProject "OJFSegmentedProgressView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEE4AFEC50157DBDE23C57D4;
+			productRefGroup = EEE4A5C6076664E202DD9F2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEE4AB9F71BF535DE02E25EA /* OJFSegmentedProgressView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEE4A13E53CD381B8950C664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE4A3F8B21F0F3027756A3C /* OJFSegmentedProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EEE4A37C9A907F3DDAEF3B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEE4A907157E42DF602F7780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EEE4AC325B8A5904BB238F2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OJFSegmentedProgressView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OJFSegmentedProgressView/OJFSegmentedProgressView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EEE4ACDF30914B98D35ED465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OJFSegmentedProgressView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OJFSegmentedProgressView/OJFSegmentedProgressView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEE4A193933E3F4FC4EF2205 /* Build configuration list for PBXProject "OJFSegmentedProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE4A37C9A907F3DDAEF3B7D /* Release */,
+				EEE4A907157E42DF602F7780 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE4A825F6F79BE056756774 /* Build configuration list for PBXNativeTarget "OJFSegmentedProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE4AC325B8A5904BB238F2D /* Release */,
+				EEE4ACDF30914B98D35ED465 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEE4AC72DFC46D2094BACD8F /* Project object */;
+}
