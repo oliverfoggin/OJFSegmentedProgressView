@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EEE4A3F8B21F0F3027756A3C /* OJFSegmentedProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE4A5887534A21EB1ECC0B4 /* OJFSegmentedProgressView.m */; };
 		EEE4A68C2B6D6356E39058D7 /* OJFSegmentedProgressView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EEE4AA6755BB32D27079AE35 /* OJFSegmentedProgressView.h */; };
-		EEE4AF06D40301DDCDB04ABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE4AC0904E7338D33A5881F /* Foundation.framework */; };
+		F6FF1FBA173CFF9D00A1F841 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FF1FB8173CFF8E00A1F841 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +30,7 @@
 		EEE4A53E97C254209E835857 /* OJFSegmentedProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OJFSegmentedProgressView-Prefix.pch"; sourceTree = "<group>"; };
 		EEE4A5887534A21EB1ECC0B4 /* OJFSegmentedProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OJFSegmentedProgressView.m; sourceTree = "<group>"; };
 		EEE4AA6755BB32D27079AE35 /* OJFSegmentedProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OJFSegmentedProgressView.h; sourceTree = "<group>"; };
-		EEE4AC0904E7338D33A5881F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F6FF1FB8173CFF8E00A1F841 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEE4AF06D40301DDCDB04ABA /* Foundation.framework in Frameworks */,
+				F6FF1FBA173CFF9D00A1F841 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 		EEE4AB8C21C2275F7A8FD08D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EEE4AC0904E7338D33A5881F /* Foundation.framework */,
+				F6FF1FB8173CFF8E00A1F841 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,6 +216,7 @@
 				DSTROOT = /tmp/OJFSegmentedProgressView.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OJFSegmentedProgressView/OJFSegmentedProgressView-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -241,6 +242,7 @@
 				EEE4ACDF30914B98D35ED465 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

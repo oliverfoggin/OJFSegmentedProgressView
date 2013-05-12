@@ -11,6 +11,9 @@
 @interface OJFSegmentedProgressView : UIView
 
 @property (nonatomic) NSUInteger numberOfSegments;
+@property (nonatomic) float progress;
+@property (nonatomic, strong) UIColor *progressTintColor;
+@property (nonatomic, strong) UIColor *trackTintColor;
 
 - (id)initWithNumberOfSegments:(NSUInteger)numberOfSegments;
 
