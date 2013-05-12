@@ -19,6 +19,7 @@
         self.backgroundColor = [UIColor clearColor];
         self.contentMode = UIViewContentModeRedraw;
         self.segmentSeparatorSize = 5.0;
+        self.style = OJFSegmentedProgressViewStyleDiscrete;
     }
     return self;
 }
@@ -36,6 +37,7 @@
         self.numberOfSegments = 10;
         self.contentMode = UIViewContentModeRedraw;
         self.segmentSeparatorSize = 5.0;
+        self.style = OJFSegmentedProgressViewStyleDiscrete;
     }
     return self;
 }
@@ -48,6 +50,7 @@
     self.numberOfSegments = 10;
     self.contentMode = UIViewContentModeRedraw;
     self.segmentSeparatorSize = 5.0;
+    self.style = OJFSegmentedProgressViewStyleDiscrete;
 }
 
 - (void)setSegmentSeparatorSize:(CGFloat)segmentSeparatorSize
@@ -85,6 +88,12 @@
     }
 }
 
+- (void)setStyle:(OJFSegmentedProgressViewStyle)style
+{
+    _style = style;
+    [self setNeedsDisplay];
+}
+
 - (UIColor *)progressTintColor
 {
     if (_progressTintColor == nil) {
@@ -103,7 +112,17 @@
 
 - (int)numberOfFullSegments
 {
-    return (int)roundf(self.numberOfSegments * self.progress);
+    switch (self.style) {
+        case OJFSegmentedProgressViewStyleDiscrete:
+            return (int)roundf(self.numberOfSegments * self.progress);
+        case OJFSegmentedProgressViewStyleContinuous:
+            return (int)(self.numberOfSegments * self.progress);
+    }
+}
+
+- (float)portionOfLastSegment
+{
+    return roundf(self.numberOfSegments * self.progress) - (self.numberOfSegments * self.progress) + 0.5;
 }
 
 - (float)segmentSize

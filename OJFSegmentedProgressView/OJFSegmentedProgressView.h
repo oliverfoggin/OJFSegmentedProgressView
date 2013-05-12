@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    OJFSegmentedProgressViewStyleDiscrete,
+    OJFSegmentedProgressViewStyleContinuous,
+} OJFSegmentedProgressViewStyle;
+
 @interface OJFSegmentedProgressView : UIView
 
 @property (nonatomic) NSUInteger numberOfSegments;
 @property (nonatomic) CGFloat segmentSeparatorSize;
+
+@property (nonatomic) OJFSegmentedProgressViewStyle style;
 
 @property (nonatomic) float progress;
 @property (nonatomic, strong) UIColor *progressTintColor;
