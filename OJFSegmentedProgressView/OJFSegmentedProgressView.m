@@ -18,7 +18,6 @@
     if (self) {
         // Add customisation here...
         self.numberOfSegments = numberOfSegments;
-
         self.backgroundColor = [UIColor clearColor];
     }
     return self;
@@ -31,13 +30,29 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [self initWithNumberOfSegments:10];
-    self.frame = frame;
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+        self.numberOfSegments = 10;
+    }
     return self;
+}
+
+
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+
+    self.backgroundColor = [UIColor clearColor];
+    self.numberOfSegments = 10;
 }
 
 - (void)setNumberOfSegments:(NSUInteger)numberOfSegments
 {
+    if (numberOfSegments <= 0) {
+        numberOfSegments = 1;
+    }
     _numberOfSegments = numberOfSegments;
     [self setNeedsDisplay];
 }
