@@ -33,6 +33,7 @@
 {
     self = [self initWithNumberOfSegments:10];
     self.frame = frame;
+    return self;
 }
 
 - (void)setNumberOfSegments:(NSUInteger)numberOfSegments
