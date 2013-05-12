@@ -5,8 +5,8 @@ Pod::Spec.new do |s|
   s.homepage     = "http://www.oliverfoggin.com"
   s.license      = 'MIT'
   s.author       = { "Oliver Foggin" => "oliverfoggin@me.com" }
-  s.source       = { :git => "https://github.com/ojfoggin/OJFSegmentedProgressView.git" }
+  s.source       = { :git => "https://github.com/ojfoggin/OJFSegmentedProgressView.git", :tag => "0.1" }
   s.platform     = :ios
-  s.source_files = 'OJFSegmentedProgressView.h,m'
+  s.source_files = 'OJFSegmentedProgressView/OJFSegmentedProgressView.{h,m}'
   s.requires_arc = true
 end
