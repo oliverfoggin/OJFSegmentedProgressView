@@ -83,7 +83,8 @@
         _progress = progress;
     }
 
-    if ([self numberOfFullSegments] != oldSegments) {
+    if ([self numberOfFullSegments] != oldSegments
+            || self.style == OJFSegmentedProgressViewStyleContinuous) {
         [self setNeedsDisplay];
     }
 }
@@ -122,7 +123,7 @@
 
 - (float)portionOfLastSegment
 {
-    return roundf(self.numberOfSegments * self.progress) - (self.numberOfSegments * self.progress) + 0.5;
+    return (self.numberOfSegments * self.progress) - (int)(self.numberOfSegments * self.progress);
 }
 
 - (float)segmentSize
@@ -138,17 +139,31 @@
 
     [self.progressTintColor set];
 
+    float y = 0;
+    float height = self.frame.size.height;
+    float width = [self segmentSize];
+
     for (int segment = 0; segment < self.numberOfSegments; segment++) {
+        float x = segment * (self.segmentSeparatorSize + width);
+
+        if (self.style == OJFSegmentedProgressViewStyleContinuous
+                && segment == [self numberOfFullSegments]) {
+            float percentage = [self portionOfLastSegment];
+
+            CGContextFillRect(context, CGRectMake(x, y, width * percentage, height));
+            [self.trackTintColor set];
+            CGContextFillRect(context, CGRectMake(x + width * percentage, y, width - width * percentage, height));
+        }
+
         if (segment >= [self numberOfFullSegments]) {
             [self.trackTintColor set];
         }
 
-        float width = [self segmentSize];
-        float x = segment * (self.segmentSeparatorSize + width);
-        float y = 0;
-        float height = self.frame.size.height;
+        if (self.style == OJFSegmentedProgressViewStyleDiscrete
+                || segment != [self numberOfFullSegments]){
+            CGContextFillRect(context, CGRectMake(x, y, width, height));
+        }
 
-        CGContextFillRect(context, CGRectMake(x, y, width, height));
     }
 }
 
