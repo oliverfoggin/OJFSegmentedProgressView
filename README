@@ -1,1 +1,13 @@
-This file was created by JetBrains AppCode 2.0.3 for binding GitHub repository
+OJFSegmentedProgressView is a replacement for UIProgressView that displays in segments.
+
+Properties:
+
+@property (nonatomic) NSUInteger numberOfSegments;
+@property (nonatomic) float segmentSeparatorSize;
+@property (nonatomic) float progress;
+@property (nonatomic, strong) UIColor *trackTintColor;
+@property (nonatomic, strong) UIColor *progressTintColor;
+
+Constructor:
+
+- (id)initWithNumberOfSegments:(NSUInteger)numberOfSegments;
