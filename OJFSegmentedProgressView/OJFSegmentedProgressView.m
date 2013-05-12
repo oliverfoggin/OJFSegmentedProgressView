@@ -8,8 +8,6 @@
 
 #import "OJFSegmentedProgressView.h"
 
-#define SEGMENT_SEPARATOR_SIZE 5
-
 @implementation OJFSegmentedProgressView
 
 - (id)initWithNumberOfSegments:(NSUInteger)numberOfSegments
@@ -19,6 +17,8 @@
         // Add customisation here...
         self.numberOfSegments = numberOfSegments;
         self.backgroundColor = [UIColor clearColor];
+        self.contentMode = UIViewContentModeRedraw;
+        self.segmentSeparatorSize = 5.0;
     }
     return self;
 }
@@ -34,11 +34,11 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         self.numberOfSegments = 10;
+        self.contentMode = UIViewContentModeRedraw;
+        self.segmentSeparatorSize = 5.0;
     }
     return self;
 }
-
-
 
 - (void)awakeFromNib
 {
@@ -46,6 +46,17 @@
 
     self.backgroundColor = [UIColor clearColor];
     self.numberOfSegments = 10;
+    self.contentMode = UIViewContentModeRedraw;
+    self.segmentSeparatorSize = 5.0;
+}
+
+- (void)setSegmentSeparatorSize:(CGFloat)segmentSeparatorSize
+{
+    if (segmentSeparatorSize <= 1) {
+        segmentSeparatorSize = 1;
+    }
+    _segmentSeparatorSize = segmentSeparatorSize;
+    [self setNeedsDisplay];
 }
 
 - (void)setNumberOfSegments:(NSUInteger)numberOfSegments
@@ -97,7 +108,7 @@
 
 - (float)segmentSize
 {
-    float segmentTotalSize = self.frame.size.width - SEGMENT_SEPARATOR_SIZE * (self.numberOfSegments - 1);
+    float segmentTotalSize = self.frame.size.width - self.segmentSeparatorSize * (self.numberOfSegments - 1);
 
     return segmentTotalSize / self.numberOfSegments;
 }
@@ -114,7 +125,7 @@
         }
 
         float width = [self segmentSize];
-        float x = segment * (SEGMENT_SEPARATOR_SIZE + width);
+        float x = segment * (self.segmentSeparatorSize + width);
         float y = 0;
         float height = self.frame.size.height;
 
